@@ -1,0 +1,29 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master # Cambia esto si usas otra rama (por ejemplo, main)
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # Paso 1: Descargar el código del repositorio
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Paso 2: Instalar dependencias
+      - name: Install dependencies
+        run: npm install
+
+      # Paso 3: Construir el proyecto
+      - name: Build project
+        run: npm run build
+
+      # Paso 4: Desplegar en GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist # Cambia esto si usas otra carpeta (por ejemplo, ./docs)
