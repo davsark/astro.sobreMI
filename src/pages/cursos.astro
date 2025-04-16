@@ -1,0 +1,94 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+---
+<Layout title="Cursos">
+    <Header/>
+    <body>
+        <div class="contenedor-cursos">
+            <div class="columna-en-curso">
+                <h2>Aprendiendo</h2>
+                <div class="curso">JavaScript</div>
+                <div class="curso">Java</div>
+                <div class="curso">Astro</div>
+                <div class="curso">WordPress</div>
+
+            </div>
+            <div class="columna-completados">
+                <h2>Cursos Completados</h2>
+                <div class="curso">Crear una web con HTML y CSS (2024) Udemy</div>
+                <div class="curso">Programación para principiantes Udemy (2023)</div>
+                <div class="curso">Bases de la programación (2022) Udemy</div>
+                <div class="curso">Introducción a las habilidades profesionales en el desarrollo de software (2022)</div>
+                <div class="curso">Fundamentos esenciales de la programación (2021)</div>
+                <div class="curso">Certificado de Aptitud Profesional (2020)</div>
+                <div class="curso">Competencias digitales (2020)</div>
+            </div>
+          
+        </div>
+        
+
+
+
+
+    </body>
+<Footer/>
+</Layout>
+
+<style>
+.contenedor-cursos{
+    text-align: center;
+    display: grid;
+    gap: 20px; /* espacio entre columnas */
+    grid-template-columns: 1fr 1fr; /* dos columnas iguales*/
+    padding: 20px;
+    max-width: 1200px; /* ancho máximo del contenedor */
+    margin: auto; /* centrado horizontal */
+}
+.curso{
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    border: 3px solid black;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.columna-en-curso{
+    background-color: #f9f9f9;
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 20px;
+}
+.columna-completados{
+    background-color: #f9f9f9;
+  border: 3px solid #000000;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/*Para tablets*/
+@media (max-width: 768px) {
+  .contenedor-cursos {
+    grid-template-columns: 1fr; /* Una sola columna en tablets */
+  }
+}
+
+/*Para moviles*/
+@media (max-width: 480px) {
+  .contenedor-cursos {
+    grid-template-columns: 1fr; /* Una sola columna en móviles */
+  }
+
+  .columna-en-curso,
+  .columna-completados {
+    padding: 15px; /* Reducir el padding para móviles */
+  }
+
+  .curso {
+    padding: 8px; /* Reducir el padding para móviles */
+  }
+}
+
+
+</style>

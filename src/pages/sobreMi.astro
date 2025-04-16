@@ -1,16 +1,90 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Sobre Mi">
     <Header/>
-    <img src="/images/fotoperfil.png" width="150px" alt="David Márquez" id="background" />
-    <div class="container">
-        <h1>Hola, soy David Márquez</h1>
-        <p>Desarrollador web y amante de la tecnología.</p>
-        <p>Me apasiona aprender y compartir conocimientos sobre programación y desarrollo web.</p>
-        <p>En este sitio encontrarás información sobre mis proyectos, cursos y redes sociales.</p>
+    <body>
+        <!--Primer cuadro de texto -->
+        <div class="container">
+            <img class="fotoPerfil" src="/images/fotoperfil.png" alt="David Márquez"  />
+            <div class="intro">
+                <h1>Hola, soy David Márquez</h1>
+                <p>Desarrollador web y amante de la tecnología.</p>
+                <p>Me apasiona aprender y compartir conocimientos sobre programación y desarrollo web.</p>
+                <p>Esta es mi primera Web, en este sitio encontrarás información sobre mis proyectos, cursos y redes sociales.</p>
+        </div>
     </div>
+    
+    <!--Segundo cuadro de texto -->
+    <div class="container">
+        <div class="estudios">
+            <h2>Estudios</h2>
+            <p>🎓Técnico superior en <b>Desarrollo de Aplicaciones Web</b>en <b>Jobie FP, Madrid</b>. Actualmete estoy realizando las prácticas en la empresa: <b>CodeNode.</b></p>
+            <p>🎓Bachillerato de Ciencias en: <b>IES A Xunqueira II</b> (2015-2017).</p>
+    </div>
+</div>
 
+</body>
+<Footer/>
 </Layout>
+
+
+
+
+
+
+<style>
+    body{
+        background-color: #f0f0f0;
+    }
+
+.fotoPerfil{
+    width: 150px;
+    height: 200px;
+}
+.container{
+    display: flex;
+    text-align: left;
+    gap: 20px; /*Espacio entre la foto y el texto*/
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: auto;
+    border: 3px solid black;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.estudios p {
+    text-indent: 10px;
+}
+.estudios h2{
+    text-align: center;
+    margin-top: auto;
+    }
+    /*Para tablets*/
+@media (max-width: 768px) {
+  .contenedor-cursos {
+    grid-template-columns: 1fr; /* Una sola columna en tablets */
+  }
+}
+
+/*Para moviles*/
+@media (max-width: 480px) {
+  .contenedor-cursos {
+    grid-template-columns: 1fr; /* Una sola columna en móviles */
+  }
+
+  .columna-en-curso,
+  .columna-completados {
+    padding: 15px; /* Reducir el padding para móviles */
+  }
+
+  .curso {
+    padding: 8px; /* Reducir el padding para móviles */
+  }
+}
+</style>

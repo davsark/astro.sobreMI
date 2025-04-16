@@ -2,39 +2,96 @@
 
 ---
 <header>
+    <head>
     <div class="cabeza">
         <h1>Bienvenido a mi web </h1>
         <nav>
          <ul>
-            <li><a href="/">Inicio</a></li>
-            <li><a href="/sobreMi">Sobre Mi</a></li>
-            <li><a href="/cursos">Cursos</a></li>
-            <li><a href="/redesSociales">Redes Sociales</a></li>
+            <li><a href="/"><button>Inicio</button></a></li>
+            <li><a href="/sobreMi"><button>Sobre Mi</button></a></li>
+            <li><a href="/cursos"><button>Cursos</button></a></li>
+            <li><a href="/redesSociales"><button>Redes Sociales</button></a></li>
             </ul>
          </nav>
     </div>
-   
+    </head>
 </header>
 
 <style>
 h1{
-border:3px solid black;
-padding: 10px;
+margin-top: 10px;
+padding: 5px;
+display: inline-block;
+color: white;
+
 }
 .cabeza {
     text-align: center;
-    padding: 10px;
-    background-color: #6a6e72;
-
+    padding: 5px;
+    background-color: #2c3e50;
+    max-width: 100%;
+}
+ul{
+    margin-top: 1px;
 }
 li{
     list-style: none;
     display: inline-block;
     margin-right: 20px;
-    font-size: 20px;
     text-align: center;
-
+}
+button{
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 1px 2px;
+    cursor: pointer;
+}
+button:hover {
+    color: white;
+    background-color: #1abc9c; /* Cambia el color al pasar el mouse */
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño */
 }
 
+/* Media query para tablets */
+@media (max-width: 768px) {
+  li {
+    display: block; /* Apila los elementos verticalmente */
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 
+  button {
+    font-size: 16px; /* Reduce el tamaño del texto */
+    padding: 8px 16px; /* Reduce el padding */
+  }
+}
+
+/* Media query para móviles */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 20px; /* Reduce el tamaño del título */
+    padding: 3px;
+  }
+
+  li {
+    display: block; /* Apila los elementos verticalmente */
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+
+  button {
+    font-size: 14px; /* Reduce aún más el tamaño del texto */
+    padding: 6px 12px; /* Reduce el padding */
+  }
+
+  .cabeza {
+    padding: 3px; /* Reduce el padding del header */
+  }
+}
 </style>
