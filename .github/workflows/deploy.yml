@@ -26,4 +26,3 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.PERSONAL_TOKEN }}
-          publish_dir: ./docs # Cambia esto si usas otra carpeta (por ejemplo, ./docs)g
