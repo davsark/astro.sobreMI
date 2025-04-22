@@ -1,11 +1,12 @@
 ---
-
+import{Image} from "astro:assets";
+import foto from "../assets/programador_martillo.jpg";
 ---
 <body>
 	<h1>Portfolio David Márquez</h1>
 	<p>Haz clicl en la imagen para ir a mi Web.</p>
 	<a href="/sobreMi">
-		<img src="/programador_martillo.jpg" alt="Programador con martillo" width="600">
+		<Image src={foto} alt="tiburon" width={500} height={500} format="webp"/>
 	</a>
 	
 </body>
