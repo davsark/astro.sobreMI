@@ -1,0 +1,38 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+// Parámetros de la ruta (slug viene de la URL)
+const { slug } = Astro.params;
+
+// Props pasadas desde getStaticPaths
+const { post } = Astro.props;
+
+// Renderizar contenido si el post existe
+let Content;
+if (post) {
+  const { Content: RenderedContent } = await post.render();
+  Content = RenderedContent;
+}
+
+// Generar rutas estáticas
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post }, // Pasamos el post como prop
+  }));
+}
+---
+<Layout title="Publicacion">
+  {post && Content ? (
+    <>
+      <h1>{post.data.title}</h1>
+      <p>{post.data.description}</p>
+      <p>{new Date(post.data.date).toLocaleDateString()}</p>
+      <Content />
+    </>
+  ) : (
+    <p>¡Ups! Esta publicación no existe.</p>
+  )}
+</Layout>

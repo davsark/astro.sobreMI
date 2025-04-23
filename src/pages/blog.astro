@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('posts')
+console.log(posts);
+---
+<Layout title="Redes Sociales">
+
+<body>
+    <h1>Blog</h1>
+    <ul>
+        {posts.map((post: any) => (
+            <li>
+                <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+            </li>
+        ))}
+    </ul>
+</body>
+
+</Layout>
+
+
+<style>
+
+</style>
