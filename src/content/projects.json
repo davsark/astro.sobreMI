@@ -1,0 +1,21 @@
+[
+    {
+      "title": "Proyecto Uno",
+      "slug": "proyecto-uno",
+      "description": "Este es el primer proyecto.",
+      "stack": "HTML, CSS, JavaScript"
+    },
+    {
+      "title": "Proyecto Dos",
+      "slug": "proyecto-dos",
+      "description": "Este es el segundo proyecto.",
+      "stack": "React, Tailwind"
+    },
+    {
+      "title": "Proyecto Tres",
+      "slug": "proyecto-tres",
+      "description": "Este es el tercer proyecto.",
+      "stack": "Astro, Markdown"
+    }
+  ]
+  
