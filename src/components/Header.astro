@@ -12,6 +12,7 @@
             <li><a href="/cursos"><button>Cursos</button></a></li>
             <li><a href="/blog"><button>Blog</button></a></li>
             <li><a href="/projects"><button>Proyectos</button></a></li>
+            <li><a href="/apitest"><button>Api</button></a></li>
             </ul>
          </nav>
     </div>
@@ -59,40 +60,50 @@ button:hover {
   transform: scale(1.1); /* Aumenta ligeramente el tamaño */
 }
 
-/* Media query para tablets */
 @media (max-width: 768px) {
+  ul {
+    display: flex;
+    flex-direction: row; /* Mantiene los <li> en fila */
+    justify-content: center; /* Opcional: centra los botones */
+    padding: 0;
+    margin: 0;
+  }
+
   li {
-    display: block; /* Apila los elementos verticalmente */
-    margin-right: 0;
-    margin-bottom: 10px;
+    display: flex; /* O inline-flex */
+    margin-right: 10px;
+    margin-bottom: 0; /* No más margen inferior */
   }
 
   button {
-    font-size: 16px; /* Reduce el tamaño del texto */
-    padding: 8px 16px; /* Reduce el padding */
+    font-size: 16px;
+    padding: 8px 16px;
   }
 }
 
 /* Media query para móviles */
 @media (max-width: 480px) {
-  h1 {
-    font-size: 20px; /* Reduce el tamaño del título */
-    padding: 3px;
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
   }
 
   li {
-    display: block; /* Apila los elementos verticalmente */
-    margin-right: 0;
-    margin-bottom: 8px;
+    display: flex;
+    margin-right: 8px;
+    margin-bottom: 0;
   }
 
   button {
-    font-size: 14px; /* Reduce aún más el tamaño del texto */
-    padding: 6px 12px; /* Reduce el padding */
+    font-size: 14px;
+    padding: 6px 12px;
   }
 
   .cabeza {
-    padding: 3px; /* Reduce el padding del header */
+    padding: 3px;
   }
 }
 </style>

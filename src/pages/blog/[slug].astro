@@ -27,10 +27,14 @@ export async function getStaticPaths() {
 <Layout title="Publicacion">
   {post && Content ? (
     <>
+      <div class="recuadro">
       <h1>{post.data.title}</h1>
       <p>{post.data.description}</p>
       <p>{new Date(post.data.date).toLocaleDateString()}</p>
       <Content />
+      <a href="/blog">←Volver a Blog</a>
+      </div>
+
     </>
   ) : (
     <p>¡Ups! Esta publicación no existe.</p>
@@ -38,6 +42,17 @@ export async function getStaticPaths() {
 </Layout>
 
 <style>
+.recuadro{
+  grid-template-columns: repeat(auto-fill, minmax(200px, auto));
+        gap: 1rem;
+        margin: 0 auto;
+        max-width: 500px;
+        justify-content: center;
+        border: 2px solid #2c3e50;
+        border-radius: 10px;
+        margin:15px auto ;
+
+}
   body{
     text-align:center ;
   }
@@ -55,7 +70,18 @@ p {
     margin: 0 auto;
     padding: 20px;
 }
-
+a {
+    display: inline;
+    text-decoration: none;
+    color: #2c3e50;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    border: 2px solid #2c3e50;
+    transition: transform 0.3s ease;
+}
 /* Media query para tablets */
 @media (max-width: 768px) {
     p {

@@ -1,0 +1,29 @@
+---
+const {title, description, url} = Astro.props;
+---
+
+<article class="card">
+    <a href={`/blog/${url}`}>
+      <h2>{title}</h2>
+      <p>{description || "Sin descripción."}</p>
+    </a>
+  </article>
+
+<style>
+     .card:hover{
+        transform: scale(1.02);
+    }
+    .card{
+        
+        background-color: #f0f0f0;
+        margin: 15px 0;
+        padding: 20px;
+        border-radius: 10px;
+        border: 2px solid #2c3e50;
+        transition: transform 0.3s ease;
+    }
+    a{
+        color: #2c3e50;
+        text-decoration: none;
+   }
+</style>

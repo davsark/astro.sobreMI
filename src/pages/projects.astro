@@ -3,10 +3,12 @@ import projects from '../content/projects.json';
 import Layout from '../layouts/Layout.astro';
 ---
 
-<h1>Mis Proyectos</h1>
+
 <Layout title="Proyectos">
 <ul>
+    <h1>Mis Proyectos</h1>
   {projects.map(project => (
+    
     <li>
       <a href={`/projects/${project.slug}`}>
         <h2>{project.title}</h2>
@@ -54,6 +56,7 @@ h2 {
 
 a {
     text-decoration: none;
+    color: #2c3e50;
 }
 
 p {
