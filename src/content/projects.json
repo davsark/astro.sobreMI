@@ -1,21 +1,30 @@
 [
     {
-      "title": "Proyecto Uno",
-      "slug": "proyecto-uno",
-      "description": "Este es el primer proyecto.",
-      "stack": "HTML, CSS, JavaScript"
+      "title": "Portfolio Personal",
+      "slug": "portfolio-personal",
+      "description": "Mi portfolio web personal desarrollado desde cero. Incluye secciones sobre mi experiencia, proyectos y forma de contacto. Diseñado con un enfoque minimalista y responsive para mostrar mis habilidades como desarrollador.",
+      "stack": "HTML, CSS, JavaScript",
+      "fecha": "2023",
+      "github": "https://github.com/usuario/portfolio",
+      "demo": "https://portfolio-demo.com"
     },
     {
-      "title": "Proyecto Dos",
-      "slug": "proyecto-dos",
-      "description": "Este es el segundo proyecto.",
-      "stack": "React, Tailwind"
+      "title": "Aplicación de Gestión de Tareas",
+      "slug": "task-manager",
+      "description": "Aplicación web para gestionar tareas y proyectos. Permite crear, editar y eliminar tareas, establecer fechas límite, añadir etiquetas y organizar por categorías. Incluye autenticación de usuarios y almacenamiento en base de datos.",
+      "stack": "React, Tailwind, Firebase",
+      "fecha": "2024",
+      "github": "https://github.com/usuario/task-manager",
+      "demo": "https://task-manager-demo.com"
     },
     {
-      "title": "Proyecto Tres",
-      "slug": "proyecto-tres",
-      "description": "Este es el tercer proyecto.",
-      "stack": "Astro, Markdown"
+      "title": "Blog Tech",
+      "slug": "blog-tech",
+      "description": "Blog personal sobre tecnología y desarrollo web construido con Astro. Incluye sistema de categorías, búsqueda de posts, comentarios y newsletter. Optimizado para SEO y con excelente rendimiento en Lighthouse.",
+      "stack": "Astro, Markdown, TailwindCSS",
+      "fecha": "2024", 
+      "github": "https://github.com/usuario/blog-tech",
+      "demo": "https://blog-tech-demo.com"
     }
   ]
   
